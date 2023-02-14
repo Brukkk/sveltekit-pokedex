@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Svelte Kit Pokedex</h1>
+<p>Visit <a href="https://www.youtube.com/watch?v=UU7MgYIbtAk&ab_channel=JamesQQuick">James Q Quick</a> to learn more!</p>
+ <style>
+    p {
+        color: brown;
+    }
+ </style>
