@@ -8,7 +8,7 @@
         Svelte Pokedex
     </title>
 </svelte:head>
-<h1>Svelte Kit Pokedex</h1>
+<h1 class="text-4xl font-bold underline text-center my-8 uppercase">Svelte Kit Pokedex</h1>
 {#each $pokemonList as pokemon }
 <img src={pokemon.image} alt={`${pokemon.name} image`}>
 <p> {pokemon.name} <span> ID: {pokemon.id}</span></p>
