@@ -1,5 +1,7 @@
 <script>
-    import Nav from "../components/nav.svelte";
+    import {pokemonList} from "../stores/pokestore"
+    // $ sign is to actual access the data inside the writable store
+    // console.log($pokemonList)
 </script>
 <svelte:head>
     <title>
@@ -7,8 +9,8 @@
     </title>
 </svelte:head>
 <h1>Svelte Kit Pokedex</h1>
- <style>
-    p {
-        color: brown;
-    }
- </style>
+{#each $pokemonList as pokemon }
+<img src={pokemon.image} alt={`${pokemon.name} image`}>
+<p> {pokemon.name} <span> ID: {pokemon.id}</span></p>
+    
+{/each}
