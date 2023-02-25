@@ -3,7 +3,7 @@
 </script>
 
 <Nav/>
-<div class="p-10 max-w-6xl mx-auto">    
+<div class="p-4 max-w-6xl mx-auto">    
     <slot></slot>
 </div>
 <footer>
