@@ -1,0 +1,1 @@
+<h1>This is a page with url and parameter according to the pokemon's id</h1>
