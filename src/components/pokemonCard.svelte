@@ -1,10 +1,23 @@
 <script>
     // this expects information as the props of the component
     export let pokemonInfo;
+    import { getBackgroundColor } from "../utils/bgColor"
+    import { fromTypeColor, toTypeColor } from "../utils/gradientTypeColor"
+    let bgColor = getBackgroundColor(pokemonInfo.types[0], pokemonInfo.types[1])
+    let fromColor = "";
+    let toColor = "";
+    if ( pokemonInfo.types.length >= 2){
+        fromColor = fromTypeColor(pokemonInfo.types[0])
+        toColor = toTypeColor(pokemonInfo.types[1])
+    }
 </script>
-<a href={`/pokemon/${pokemonInfo.id}`} class="bg-slate-200 rounded-lg opacity-75 hover:opacity-100 transition-opacity ease-in-out hover:-translate-y-1 hover:scale-110 p-2">
+
+<a href={`/pokemon/${pokemonInfo.id}`} class="block w-full h-full {bgColor} {fromColor} {toColor} rounded-lg opacity-75 hover:opacity-100 transition-opacity hover:-translate-y-1 hover:scale-110 p-2">
     <div class="relative">
         <span class="absolute top-2 right-2 font-semibold">#{pokemonInfo.id}</span>
+        {#each pokemonInfo.types as type}
+            <p>{type}</p>
+        {/each}
         <img class="mx-auto aspect-square h-40 w-40" src={pokemonInfo.image} alt={`${pokemonInfo.name} sprite`}>
         <p class="text-center text-2xl first-letter:uppercase">{pokemonInfo.name}</p>
 
