@@ -12,14 +12,11 @@
     }
 </script>
 
-<a href={`/pokemon/${pokemonInfo.id}`} class="block w-full h-full {bgColor} {fromColor} {toColor} rounded-lg lg:opacity-75 lg:hover:opacity-100 transition-opacity lg:hover:-translate-y-1 lg:hover:scale-110 p-2">
+<a href={`/pokemon/${pokemonInfo.id}`} class="block w-full h-full {bgColor} {fromColor} {toColor} rounded-lg lg:opacity-75 lg:hover:opacity-100 transition-opacity lg:hover:-translate-y-1 lg:hover:scale-110">
     <div class="relative">
-        <span class="absolute top-2 right-2 font-semibold">#{pokemonInfo.id}</span>
-        {#each pokemonInfo.types as type}
-            <p>{type}</p>
-        {/each}
+        <span class="absolute text-slate-600 top-1 right-2 font-semibold text-2xl">#{pokemonInfo.id}</span>
         <img class="mx-auto aspect-square h-40 w-40" src={pokemonInfo.image} alt={`${pokemonInfo.name} sprite`}>
-        <p class="text-center text-2xl first-letter:uppercase">{pokemonInfo.name}</p>
+        <p class=" py-1 rounded-b-lg text-center text-2xl first-letter:uppercase text-white bg-gradient-to-t from-gray-500 ">{pokemonInfo.name}</p>
 
     </div>
     
