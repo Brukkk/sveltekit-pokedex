@@ -14,7 +14,7 @@ export function getBackgroundColor(type1, type2) {
             case "ice":
                 return "bg-gradient-to-br from-teal-500 via-slate-200 to-teal-500";
             case "fighting":
-                return "bg-gradient-to-br from-red-600 via-slate-200 to-red-600";
+                return "bg-gradient-to-br from-amber-900 via-slate-200 to-amber-900";
             case "poison":
                 return "bg-gradient-to-br from-purple-500 via-slate-200 to-purple-500";
             case "ground":
