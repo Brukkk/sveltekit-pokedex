@@ -3,7 +3,7 @@
 </script>
 
 <Nav/>
-<div class="p-4 max-w-6xl mx-auto bg-slate-100 lg:mt-10">    
+<div class="max-lg:min-h-[calc(100vh-100px)] p-4 max-w-6xl mx-auto bg-slate-100 lg:mt-10">    
     <slot></slot>
 </div>
 <footer class="py-4 max-lg:mb-10">
